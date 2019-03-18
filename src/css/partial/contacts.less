@@ -1,0 +1,65 @@
+.about-me{
+	max-width: 100%;
+	font-size: 17px;
+	height: 500px;
+}
+
+.about-me__img{
+	float: right;
+	margin-left: 100px;
+	margin-right: 100px;
+	height: 500px;
+}
+
+.about-me__article{
+	padding-top: 20px;
+	margin-right: 50px;
+	margin-left: 100px;
+	font-family: Arial;
+	/*line-height: 12px;*/
+	color: rgba(70,69,83,1);
+	text-align: justify;
+	opacity: @general-opacity;
+	border-bottom: 2px solid @background-color;
+}
+
+.contacts{
+	padding-left: 100px;
+	opacity: @general-opacity;
+}
+
+.contacts-item{
+	height: 62px;
+	-webkit-background-size: 40px;
+	background-size: 40px;
+	padding-left: 60px;
+	background-repeat: no-repeat;
+	background-position: left center;
+	margin: 10px 0;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	list-style-type: none;
+	font-family: @font-family-content;
+}
+
+.contacts-item_map{
+	background-image: url('../images/icons/contacts-map.png');
+}
+
+.contacts-item_map a{
+	text-decoration: none;
+	color: green;
+}
+
+.contacts-item_phone{
+	background-image: url('../images/icons/contacts-phone.png');
+}
+
+.contacts-item_viber{
+	background-image: url('../images/icons/contacts-viber.png');
+}

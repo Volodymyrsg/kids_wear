@@ -1,0 +1,43 @@
+.menu{
+	position: relative;
+	overflow: hidden;
+	background-color: @color-logo-green;
+	color: white;
+}
+
+.menu .menu-list{
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  padding: 0 12px;
+	list-style-type: none;
+}
+
+/* Hide scrollbar*/
+.menu-list::-webkit-scrollbar{
+	width: 0;
+	height: 0;
+}
+
+.menu-item{
+	display: inline-block;
+}
+
+.menu-item__link{
+	display: inline-block;
+	font-size: 14px;
+	padding: 6px 8px;
+	cursor: pointer;
+	.remove-link-style();
+}
+
+.menu-item__link:hover{
+	background-color: green;
+}
+
+.menu-item_open{
+	color: @color-logo-green;
+	background-color: white;
+	font-weight: bold;
+}

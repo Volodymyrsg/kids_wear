@@ -1,0 +1,202 @@
+/*!
+*  - v1.4.0
+* Homepage: http://bqworks.com/slider-pro/
+* Author: bqworks
+* Author URL: http://bqworks.com/
+*/
+/* Core
+--------------------------------------------------*/
+.slider-pro {
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.sp-slides-container {
+  position: relative;
+}
+
+.sp-mask {
+  position: relative;
+  overflow: hidden;
+}
+
+.sp-slides {
+  position: relative;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+
+.sp-slide {
+  position: absolute;
+}
+
+.sp-image-container {
+  overflow: hidden;
+}
+
+.sp-image {
+  position: relative;
+  display: block;
+  border: none;
+  opacity: @general-opacity;
+}
+
+.sp-no-js {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+/* Touch Swipe
+--------------------------------------------------*/
+.sp-grab {
+  cursor: url("../images/icons/openhand.cur"), move;
+}
+
+.sp-grabbing {
+  cursor: url("../images/icons/closedhand.cur"), move;
+}
+
+.sp-selectable {
+  cursor: default;
+}
+
+/* Arrows
+--------------------------------------------------*/
+.sp-arrows {
+  position: absolute;
+}
+
+.sp-fade-arrows {
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.sp-slides-container:hover .sp-fade-arrows {
+  opacity: 1;
+}
+
+.sp-horizontal .sp-arrows {
+  width: 100%;
+  left: 0;
+  top: 50%;
+  margin-top: -15px;
+}
+
+.sp-arrow {
+  position: absolute;
+  display: block;
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.sp-horizontal .sp-previous-arrow {
+  left: 20px;
+  right: auto;
+}
+
+.sp-horizontal.sp-rtl .sp-previous-arrow {
+  right: 20px;
+  left: auto;
+}
+
+.sp-horizontal .sp-next-arrow {
+  right: 20px;
+  left: auto;
+}
+
+.sp-horizontal.sp-rtl .sp-next-arrow {
+  left: 20px;
+  right: auto;
+}
+
+.sp-previous-arrow:before,
+.sp-previous-arrow:after,
+.sp-next-arrow:before,
+.sp-next-arrow:after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background-color: #FFF;
+}
+
+.sp-arrow:before {
+  left: 30%;
+  top: 0;
+  -webkit-transform: skew(145deg, 0deg);
+  -ms-transform: skew(145deg, 0deg);
+  transform: skew(145deg, 0deg);
+}
+
+.sp-arrow:after {
+  left: 30%;
+  top: 50%;
+  -webkit-transform: skew(-145deg, 0deg);
+  -ms-transform: skew(-145deg, 0deg);
+  transform: skew(-145deg, 0deg);
+}
+
+.sp-next-arrow {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sp-horizontal.sp-rtl .sp-previous-arrow {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.sp-horizontal.sp-rtl .sp-next-arrow {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.ie8 .sp-arrow,
+.ie7 .sp-arrow {
+  width: 0;
+  height: 0;
+}
+
+.ie8 .sp-arrow:before,
+.ie8 .sp-arrow:after,
+.ie7 .sp-arrow:before,
+.ie7 .sp-arrow:after {
+  content: none;
+}
+
+.ie8.sp-horizontal .sp-previous-arrow,
+.ie7.sp-horizontal .sp-previous-arrow {
+  border-right: 20px solid #FFF;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.ie8.sp-horizontal .sp-next-arrow,
+.ie7.sp-horizontal .sp-next-arrow {
+  border-left: 20px solid #FFF;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+}
+
+.ie8.sp-vertical .sp-previous-arrow,
+.ie7.sp-vertical .sp-previous-arrow {
+  border-bottom: 20px solid #FFF;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
+
+.ie8.sp-vertical .sp-next-arrow,
+.ie7.sp-vertical .sp-next-arrow {
+  border-top: 20px solid #FFF;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+}
